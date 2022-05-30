@@ -2,12 +2,95 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
+    display: flex;
     text-align: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, blue, aqua);
+    color: white;
 }
 
 .stopwatch-container {
     font-size: 4rem;
+    width: 550px;
+    margin-top: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: rgb(238, 13, 13);
+}
+
+.buttons {
+    margin: 20px auto;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    color: white;
+}
+
+#pause {
+    background-color: rgb(0, 0, 255);
+}
+
+#start {
+    background-color: rgb(8, 236, 8);
+}
+#reset {
+    background-color: rgb(240, 80, 12);
+}
+#flag {
+    background-color: rgb(255, 0, 0);
+}
+
+#pause:hover {background-color: rgb(0, 0, 124)}
+
+#start:hover {background-color: rgb(2, 135, 2)}
+
+#reset:hover {background-color: rgb(137, 46, 7)}
+
+#flag:hover {background-color: rgb(133, 0, 0)}
+
+button:active {
+    background-color: rgb(2, 135, 2);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+@media (max-width: 550px) {
+    .stopwatch-container {
+        font-size: 3rem;
+        width: 350px;
+        margin-top: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 15px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+        color: white;
+    }
+
+    .buttons {
+        margin: 15px auto;
+        height: 30px;
+        gap: 20px;
+    }
 }
